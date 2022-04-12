@@ -1,5 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ServicioEliminar]
-  @IdServicio INT
+﻿CREATE PROCEDURE [dbo].[SolicitudEliminar]
+  @IdSolicitud INT
 
 AS
  BEGIN
@@ -9,8 +9,8 @@ AS
 
   BEGIN TRY
 
-   DELETE FROM dbo.Servicio
-   WHERE IdServicio= @IdServicio
+   DELETE FROM dbo.Solicitud
+   WHERE IdSolicitud= @IdSolicitud
 
   COMMIT TRANSACTION TRASA
   SELECT 0 AS CodeError, '' AS MsgError

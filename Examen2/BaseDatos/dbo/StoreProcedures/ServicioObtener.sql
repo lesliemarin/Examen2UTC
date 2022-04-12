@@ -1,21 +1,21 @@
 ﻿CREATE PROCEDURE [dbo].[ServicioObtener]
-	@IdServicio INT = NULL
+	@IdServicio INT
 
 AS
 BEGIN 
 	SET NOCOUNT ON
 
 	SELECT 
-	       IdServicio 
-		   ,NombreServicio 
-		   ,PlazoEntrega 
-		   ,CostoServicio 
-		   ,Estado
-		   ,CuentaContable
+IdServicio ,
+NombreServicio ,
+PlazoEntrega ,
+CostoServicio ,
+Estado,
+CuentaContable
 	FROM
 	    dbo.Servicio
 	WHERE
-	    (@IdServicio IS NULL OR IdServicio=@IdServicio)
+	    (IdServicio IS NULL OR IdServicio=@IdServicio)
 	      
 
 END
