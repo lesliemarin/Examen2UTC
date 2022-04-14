@@ -1,5 +1,5 @@
 ﻿    CREATE PROCEDURE [dbo].[ClienteObtener]
-        @IdCliente INT
+       
 
     AS
     BEGIN 
@@ -23,8 +23,7 @@
     CorreoNotifica
         FROM
             dbo.Cliente
-        WHERE
-            (@IdCliente IS NULL OR IdCliente=@IdCliente)
+
           
 
     END

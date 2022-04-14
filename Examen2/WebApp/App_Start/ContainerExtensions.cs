@@ -14,7 +14,9 @@ namespace WebApp
         public static IServiceCollection AddDIContainer(this IServiceCollection services)
         {
             services.AddSingleton<IDataAccess, DataAccess>();
-            services.AddScoped<IInstitucionService, InstitucionService>();
+            services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<IServicioService, ServicioService>();
+            services.AddScoped<ISolicitudService, SolicitudService>();
 
             return services;
         }

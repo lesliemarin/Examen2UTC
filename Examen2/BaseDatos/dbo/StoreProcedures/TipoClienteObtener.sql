@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[ServicioObtener]
+﻿CREATE PROCEDURE [dbo].[TipoClienteObtener]
 
 AS
 BEGIN 
@@ -8,5 +8,6 @@ BEGIN
 	FROM
 	    dbo.Servicio
 
+	      
 
 END

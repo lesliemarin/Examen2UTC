@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\App\Institucion\Grid.ts" />
+    <Content Remove="wwwroot\App\Solicitud\Grid.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -78,7 +78,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="wwwroot\App\Institucion\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Solicitud\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\Apexchart\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\axios\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\bootstrap-validator\bvenums.ts" />

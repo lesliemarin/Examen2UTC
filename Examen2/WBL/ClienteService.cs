@@ -14,6 +14,9 @@ namespace WBL
         Task<DBEntity> CREATE(ClienteEntity entity);
         Task<DBEntity> DELETE(ClienteEntity entity);
         Task<IEnumerable<ClienteEntity>> GET();
+
+        Task<IEnumerable<TipoClienteEntity>> GetTipoCliente();
+
         Task<ClienteEntity> GETBYID(ClienteEntity entity);
         Task<DBEntity> UPDATE(ClienteEntity entity);
     }
@@ -28,6 +31,24 @@ namespace WBL
         }
 
         #region MetodosCRUD
+
+        //Metodo GetTipoCliente
+        public async Task<IEnumerable<TipoClienteEntity>> GetTipoCliente()
+        {
+            try
+            {
+                var result = sql.QueryAsync<TipoClienteEntity>("dbo.TipoClienteObtener");
+                return await result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+        }
+
 
         //Metodo Get
         public async Task<IEnumerable<ClienteEntity>> GET()

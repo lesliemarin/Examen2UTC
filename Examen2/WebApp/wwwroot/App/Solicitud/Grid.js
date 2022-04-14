@@ -1,6 +1,6 @@
 "use strict";
-var GridInstitucion;
-(function (GridInstitucion) {
+var GridSolicitud;
+(function (GridSolicitud) {
     /*Muestra modal de mensaje*/
     if (MensajeApp != "") {
         Toast.fire({ icon: "success", title: MensajeApp });
@@ -10,12 +10,12 @@ var GridInstitucion;
         ComfirmAlert("¿Desea eliminar el registro?", "Eliminar", "warning", '#3085d6', '#d33')
             .then(function (result) {
             if (result.isConfirmed) {
-                window.location.href = "Institucion/Grid?handler=Eliminar&id=" + id;
+                window.location.href = "Solicitud/Grid?handler=Eliminar&id=" + id;
             }
         });
     }
-    GridInstitucion.OnclickEliminar = OnclickEliminar;
+    GridSolicitud.OnclickEliminar = OnclickEliminar;
     /*Datable*/
     $("#GridView").DataTable();
-})(GridInstitucion || (GridInstitucion = {}));
+})(GridSolicitud || (GridSolicitud = {}));
 //# sourceMappingURL=Grid.js.map
