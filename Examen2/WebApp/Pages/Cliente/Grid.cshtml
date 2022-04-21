@@ -1,0 +1,81 @@
+﻿@page
+@model WebApp.Pages.Cliente.GridModel
+@{
+}
+
+<style>
+    .color-a {
+        color: #fff;
+    }
+
+        .color-a:hover {
+            color: #fff;
+        }
+</style>
+
+<div class="container">
+
+    <table id="GridView" class="table table-striped table table-hover table table-bordered">
+        <thead>
+            <tr>
+                <th>Id Cliente</th>
+                <th>Identificacion</th>
+                <th>Tipo de Idectificacion</th>
+                <th>Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Fecha Nacimiento</th>
+                <th>Nacionalidad</th>
+                <th>Fecha Defuncion</th>
+                <th>Genero</th>
+                <th>Nombre Completo del Padre</th>
+                <th>Nombre Completo de la Madre</th>
+                <th>Pasaporte</th>
+                <th>Cuenta IBAN</th>
+                <th>Correo Notificacion</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.GridList)
+            {
+            <tr>
+                <td>@item.IdCliente</td>
+                <td>@item.Identificacion</td>
+                <td>@item.IdTipoIdentificacion</td>
+                <td>@item.Nombre</td>
+                <td>@item.PrimerApellido</td>
+                <td>@item.SegundoApellido</td>
+                <td>@item.FechaNacimiento</td>
+                <td>@item.Nacionalidad</td>
+                <td>@item.FechaDefuncion</td>
+                <td>@item.Genero</td>
+                <td>@item.NombreApellidosPadre</td>
+                <td>@item.NombreApellidosMadre</td>
+                <td>@item.Pasaporte</td>
+                <td>@item.CuentaIBAN</td>
+                <td>@item.CorreoNotifica</td>
+                <td>
+                    <button type="button" class="btn btn-danger" onclick="GridCliente.OnclickEliminar(@item.IdCliente)">
+                        <i class='bx bxs-trash'></i>
+                    </button>
+                </td>
+            </tr>
+
+            }
+        </tbody>
+    </table>
+    <a type="button" class="btn btn-info color-a" asp-page="/Cliente/Create">
+        <span style="color: white;font-size: 1.4rem" class="iconify" data-icon="codicon:new-file"></span> Nuevo Cliente
+    </a>
+</div>
+
+
+</div>
+@section Scripts{
+
+    <script>
+        var MensajeApp = "@Html.Raw(Model.Mensaje)";
+    </script>
+    <script defer src="~/App/Cliente/Grid.js"></script>
+}

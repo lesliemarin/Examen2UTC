@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Cliente\Create.cshtml" />
     <Content Remove="wwwroot\App\Solicitud\Grid.ts" />
   </ItemGroup>
 
@@ -20,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Cliente\Create.cshtml" />
     <None Include="wwwroot\Assets\%40types\bootstrap-validator\bvenums.js" />
     <None Include="wwwroot\Assets\%40types\bootstrap-validator\bvenums.js.map" />
     <None Include="wwwroot\Assets\%40types\global.js" />
@@ -115,6 +117,14 @@
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\CoreFile\CoreFile.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\sweetalert\SwalConfig.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\vue\VueLoaderTemplate.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Cliente\Create.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Cliente\Create.cshtml" />
   </ItemGroup>
 
 </Project>

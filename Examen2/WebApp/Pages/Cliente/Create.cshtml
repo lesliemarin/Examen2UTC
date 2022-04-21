@@ -1,0 +1,122 @@
+﻿@page
+@model WebApp.Pages.Cliente.CreateModel
+@{
+}
+
+<div class="container">
+    <form class="row g-3" method="post">
+        <div class="col-md-6">
+            <label for="cliente" class="form-label">Cliente</label>
+
+            <select name="IdCliente" id="cliente" class="form-select">
+                <option selected disable>-- Seleccione --</option>
+                @foreach (var cliente in Model.ListCliente)
+                {
+
+                    <option value="@cliente.IdCliente">@cliente.Nombre</option>
+                }
+            </select>
+
+        </div>
+        <div class="col-md-6">
+            <label for="servicio" class="form-label">Servicio</label>
+
+            <select name="IdServicio" id="servicio" class="form-select">
+                <option selected disable>-- Seleccione --</option>
+                @foreach (var servicio in Model.ListServicio)
+                {
+
+                    <option value="@servicio.IdServicio">@servicio.NombreServicio</option>
+                }
+            </select>
+
+        </div>
+
+        <div class="col-md-6">
+            <label for="idcliente" class="form-label">Id Cliente</label>
+            <input name="IdCliente" type="text" class="form-control" id="idcliente">
+        </div>
+
+        <div class="col-md-6">
+            <label for="identificacion" class="form-label">Identificacion</label>
+            <input name="Identificacion" type="text" class="form-control" id="identificacion">
+        </div>
+
+        <div class="col-6">
+            <label for="idtipoidentificacion" class="form-label">Tipo de Identificaion</label>
+            <input name="IdTipoIdentificacion" type="date" class="form-control" id="idtipoidentificacion">
+
+        </div>
+
+        <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre Cliente</label>
+            <input name="Nombre" type="text" class="form-control" id="nombre">
+        </div>
+
+        <div class="col-md-6">
+            <label for="primerapellido" class="form-label">
+                Primer Apellido /label>
+                <input name="PrimerApellido" type="text" class="form-control" id="primerapellido">
+        </div>
+
+        <div class="col-md-6">
+            <label for="segundoapellido" class="form-label">Segundo Apellido</label>
+            <input name="SegundoApellido" type="text" class="form-control" id="segundoapellido">
+        </div>
+
+        <div class="col-md-6">
+            <label for="segundoapellido" class="form-label">Segundo Apellido</label>
+            <input name="SegundoApellido" type="text" class="form-control" id="segundoapellido">
+        </div>
+
+        <div class="col-md-6">
+            <label for="fechanaciemiento" class="form-label">Fecha Nacimiento</label>
+            <input name="FechaNacimiento" type="text" class="form-control" id="fechanaciemiento">
+        </div>
+
+        <div class="col-md-6">
+            <label for="nacionalidad" class="form-label">Nacionalidad</label>
+            <input name="Nacionalidad" type="text" class="form-control" id="nacionalidad">
+        </div>
+
+        <div class="col-md-6">
+            <label for="fechadefuncion" class="form-label">Fecha de Funcion</label>
+            <input name="FechaDefuncion" type="text" class="form-control" id="fechadefuncion">
+        </div>
+
+        <div class="col-md-6">
+            <label for="genero" class="form-label">Genero</label>
+            <input name="Genero" type="text" class="form-control" id="genero">
+        </div>
+
+        <div class="col-md-6">
+            <label for="nombreapellidospadre" class="form-label">Nombre Apellidos Padre</label>
+            <input name="NombreApellidosPadre" type="text" class="form-control" id="nombreapellidospadre">
+        </div>
+
+        <div class="col-md-6">
+            <label for="nombreapellidosmadre" class="form-label">Nombre Apellidos Madre</label>
+            <input name="NombreApellidosMadre" type="text" class="form-control" id="nombreapellidosmadre">
+        </div>
+
+        <div class="col-md-6">
+            <label for="pasaporte" class="form-label">Pasaporte</label>
+            <input name="Pasaporte" type="text" class="form-control" id="pasaporte">
+        </div>
+
+        <div class="col-md-6">
+            <label for="cuentaiban" class="form-label">Cuenta IBAN</label>
+            <input name="CuentaIBAN" type="text" class="form-control" id="cuentaiban">
+        </div>
+
+        <div class="col-md-6">
+            <label for="correonotifica" class="form-label">Correo Notificacion</label>
+            <input name="CorreoNotifica" type="text" class="form-control" id="correonotifica">
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </div>
+    </form>
+
+</div>
