@@ -20,7 +20,7 @@ namespace Entity.dbo
         public char Genero { get; set; }
         public string NombreApellidosPadre { get; set; }
         public string NombreApellidosMadre { get; set; }
-        public bool Pasaporte { get; set; }
+        public string Pasaporte { get; set; }
         public string CuentaIBAN { get; set; }
         public string CorreoNotifica { get; set; }
 

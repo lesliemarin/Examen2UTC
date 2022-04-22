@@ -5,37 +5,7 @@
 
 <div class="container">
     <form class="row g-3" method="post">
-        <div class="col-md-6">
-            <label for="cliente" class="form-label">Cliente</label>
 
-            <select name="IdCliente" id="cliente" class="form-select">
-                <option selected disable>-- Seleccione --</option>
-                @foreach (var cliente in Model.ListCliente)
-                {
-
-                    <option value="@cliente.IdCliente">@cliente.Nombre</option>
-                }
-            </select>
-
-        </div>
-        <div class="col-md-6">
-            <label for="servicio" class="form-label">Servicio</label>
-
-            <select name="IdServicio" id="servicio" class="form-select">
-                <option selected disable>-- Seleccione --</option>
-                @foreach (var servicio in Model.ListServicio)
-                {
-
-                    <option value="@servicio.IdServicio">@servicio.NombreServicio</option>
-                }
-            </select>
-
-        </div>
-
-        <div class="col-md-6">
-            <label for="idcliente" class="form-label">Id Cliente</label>
-            <input name="IdCliente" type="text" class="form-control" id="idcliente">
-        </div>
 
         <div class="col-md-6">
             <label for="identificacion" class="form-label">Identificacion</label>
@@ -44,7 +14,7 @@
 
         <div class="col-6">
             <label for="idtipoidentificacion" class="form-label">Tipo de Identificaion</label>
-            <input name="IdTipoIdentificacion" type="date" class="form-control" id="idtipoidentificacion">
+            <input name="IdTipoIdentificacion" type="number" min="1" max="2" class="form-control" id="idtipoidentificacion">
 
         </div>
 
@@ -55,7 +25,7 @@
 
         <div class="col-md-6">
             <label for="primerapellido" class="form-label">
-                Primer Apellido /label>
+                Primer Apellido </label>
                 <input name="PrimerApellido" type="text" class="form-control" id="primerapellido">
         </div>
 
@@ -65,13 +35,8 @@
         </div>
 
         <div class="col-md-6">
-            <label for="segundoapellido" class="form-label">Segundo Apellido</label>
-            <input name="SegundoApellido" type="text" class="form-control" id="segundoapellido">
-        </div>
-
-        <div class="col-md-6">
             <label for="fechanaciemiento" class="form-label">Fecha Nacimiento</label>
-            <input name="FechaNacimiento" type="text" class="form-control" id="fechanaciemiento">
+            <input name="FechaNacimiento" type="date" class="form-control" id="fechanaciemiento">
         </div>
 
         <div class="col-md-6">
@@ -81,7 +46,7 @@
 
         <div class="col-md-6">
             <label for="fechadefuncion" class="form-label">Fecha de Funcion</label>
-            <input name="FechaDefuncion" type="text" class="form-control" id="fechadefuncion">
+            <input name="FechaDefuncion" type="date" class="form-control" id="fechadefuncion">
         </div>
 
         <div class="col-md-6">

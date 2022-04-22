@@ -15,34 +15,60 @@ namespace WebApp.Pages.Cliente
 
         public string Mensaje { get; set; } = "";
 
-        public IEnumerable<ClienteEntity> ListCliente { get; set; } = new List<ClienteEntity>();
 
         public CreateModel(IClienteService cliente)
         {
             this._cliente = cliente;
         }
-        public async Task<IActionResult> OnGet()
+
+
+        public async Task<IActionResult> OnPost(ClienteEntity entity)
         {
 
             try
             {
-                ListCliente = await _cliente.GET();
+                var result = await _cliente.CREATE(entity);
 
-                if (TempData.ContainsKey("Msg"))
+                if (result.CodeError != 0)
                 {
-                    Mensaje = TempData["Msg"] as string;
+                    throw new Exception(result.MsgError);
+
                 }
 
-                TempData.Clear();
+                TempData["Msg"] = "El registro fue agregado correctamente";
 
-                return Page();
+                return Redirect("Grid");
             }
             catch (Exception ex)
             {
 
                 return Content(ex.Message);
-            }
 
+            }
         }
+
+        //public async Task<IActionResult> OnGet()
+        //{
+
+        //try
+        //{
+        //    ListCliente = await _cliente.GET();
+
+        //    if (TempData.ContainsKey("Msg"))
+        //    {
+        //        Mensaje = TempData["Msg"] as string;
+        //    }
+
+        //    TempData.Clear();
+
+        //    return Page();
+        //}
+        //catch (Exception ex)
+        //{
+
+        //    return Content(ex.Message);
+        //}
+
+        //}
     }
 }

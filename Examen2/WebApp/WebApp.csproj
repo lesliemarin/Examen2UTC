@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Content Remove="Pages\Cliente\Create.cshtml" />
+    <Content Remove="wwwroot\App\Cliente\Grid.ts" />
     <Content Remove="wwwroot\App\Solicitud\Grid.ts" />
   </ItemGroup>
 
@@ -80,6 +81,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\App\Cliente\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Solicitud\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\Apexchart\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\axios\index.d.ts" />

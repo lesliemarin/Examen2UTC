@@ -104,6 +104,7 @@ namespace WBL
                     entity.NombreApellidosMadre,
                     entity.Pasaporte,
                     entity.CuentaIBAN,
+                    entity.CorreoNotifica
                 });
 
 
